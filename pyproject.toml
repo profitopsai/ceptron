@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ceptron"
+version = "0.1.3"
+description = "Ceptron open foundation models: temporal causal discovery (built on TCPFN), from Hugging Face weights"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "torch>=2.1", "safetensors>=0.4", "huggingface_hub>=0.20"]
+
+[project.optional-dependencies]
+pandas = ["pandas>=2.0"]
+
+[tool.setuptools]
+packages = ["ceptron", "ceptron.temporal_causal"]
